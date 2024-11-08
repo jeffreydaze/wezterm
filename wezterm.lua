@@ -1,11 +1,10 @@
 -- Core Configuration
-local wezterm = require 'wezterm'
+local wezterm = require("wezterm")
 local act = wezterm.action
 local keys = require("keys")
 local fonts = require("fonts")
 local decoration = require("decoration")
 local haswork, work = pcall(require, "work")
-
 
 local config = wezterm.config_builder()
 local launch_menu = {}
@@ -24,7 +23,7 @@ if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 	end
 
 	--- Set Pwsh as the default on Windows
-	config.default_prog = { "pwsh.exe", "-NoLogo" }
+	config.default_prog = { "pwsh", "-NoLogo" }
 	table.insert(launch_menu, {
 		label = "Pwsh",
 		args = { "pwsh", "-NoLogo" },
@@ -65,18 +64,17 @@ fonts.setup(config)
 keys.setup(config)
 decoration.setup(config, isWindows11)
 
-
 -- Powershell things!
 --- Set Pwsh as the default on Windows
-config.default_prog = { 'pwsh', '-NoLogo' }
+config.default_prog = { "pwsh", "-NoLogo" }
 
 table.insert(launch_menu, {
-  label = 'PowerShell',
-  args = { 'powershell', '-NoLogo' },
+	label = "PowerShell",
+	args = { "powershell", "-NoLogo" },
 })
 table.insert(launch_menu, {
-  label = 'Pwsh',
-  args = { 'pwsh', '-NoLogo' },
+	label = "Pwsh",
+	args = { "pwsh", "-NoLogo" },
 })
 -- and finally, return the configuration to wezterm
 return config
