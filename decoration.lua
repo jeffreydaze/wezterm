@@ -1,5 +1,4 @@
 local wezterm = require("wezterm")
-
 local M = {}
 
 wezterm.on("format-tab-title", function(tab, _, _, _, hover, max_width)
@@ -80,3 +79,4 @@ function M.setup(config, isWindows11)
 end
 
 return M
+

@@ -4,10 +4,10 @@ local M = {}
 
 wezterm.on("toggle-colorscheme", function(window, pane)
 	local overrides = window:get_config_overrides() or {}
-	if overrides.color_scheme == "Rose-Pine" then
+	if overrides.color_scheme == "Tokyo Night" then
 		overrides.color_scheme = "Tokyo Night"
 	else
-		overrides.color_scheme = "Rose-Pine"
+		overrides.color_scheme = "Tokyo Night"
 	end
 	window:set_config_overrides(overrides)
 end)

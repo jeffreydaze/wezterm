@@ -64,17 +64,5 @@ fonts.setup(config)
 keys.setup(config)
 decoration.setup(config, isWindows11)
 
--- Powershell things!
---- Set Pwsh as the default on Windows
-config.default_prog = { "pwsh", "-NoLogo" }
-
-table.insert(launch_menu, {
-	label = "PowerShell",
-	args = { "powershell", "-NoLogo" },
-})
-table.insert(launch_menu, {
-	label = "Pwsh",
-	args = { "pwsh", "-NoLogo" },
-})
 -- and finally, return the configuration to wezterm
 return config
