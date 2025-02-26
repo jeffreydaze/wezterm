@@ -29,12 +29,20 @@ if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 		args = { "pwsh", "-NoLogo" },
 	})
 	table.insert(launch_menu, {
+		label = "Pwsh-Preview",
+		args = { "pwsh-preview", "-NoLogo" },
+	})
+	table.insert(launch_menu, {
 		label = "PowerShell",
 		args = { "powershell", "-NoLogo" },
 	})
 	table.insert(launch_menu, {
 		label = "Pwsh No Profile",
 		args = { "pwsh", "-NoLogo", "-NoProfile" },
+	})
+	table.insert(launch_menu, {
+		label = "Pwsh Preview No Profile",
+		args = { "pwsh-preview", "-NoLogo", "-NoProfile" },
 	})
 	table.insert(launch_menu, {
 		label = "PowerShell No Profile",

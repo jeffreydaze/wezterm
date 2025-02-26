@@ -3,14 +3,14 @@ local M = {}
 
 wezterm.on("format-tab-title", function(tab, _, _, _, hover, max_width)
 	local edge_background = "#FF0000"
-	local background = "#2b2042"
+	local background = "#1A1B2C"
 	local foreground = "#878580"
 
 	if tab.is_active then
-		background = "#5E409D"
-		foreground = "#B7B5AC"
+		background = "#28344A"
+		foreground = "#a9b1d6"
 	elseif hover then
-		background = "#3b3052"
+		background = "#1a1b26"
 		foreground = "#909090"
 	end
 
